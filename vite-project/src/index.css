@@ -1,0 +1,345 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Design tokens for the Lumi Hairs salon theme.
+  `gold` is the brand accent; `dark` is the neutral scale used for text and
+  the dark hero/footer surfaces. Only the steps actually used by components
+  are strictly required, but full scales are defined so new UI has room.
+*/
+@theme {
+  --color-gold-50: #fdf9ed;
+  --color-gold-100: #faf0d1;
+  --color-gold-200: #f4e0a3;
+  --color-gold-300: #eccb6b;
+  --color-gold-400: #e3b53f;
+  --color-gold-500: #d4a017;
+  --color-gold-600: #a97d0d;
+  --color-gold-700: #86620c;
+  --color-gold-800: #6d4f10;
+  --color-gold-900: #5b4213;
+
+  --color-dark-50: #f6f6f7;
+  --color-dark-100: #e9e9ec;
+  --color-dark-200: #d3d3d9;
+  --color-dark-300: #a8a8b3;
+  --color-dark-400: #7c7c88;
+  --color-dark-500: #5c5c66;
+  --color-dark-600: #45454d;
+  --color-dark-700: #33333a;
+  --color-dark-800: #232328;
+  --color-dark-900: #16161a;
+  --color-dark-950: #0b0b0e;
+
+  /* Warm neutral used for page/section surfaces and for text on dark panels. */
+  --color-cream-50: #fdfcf9;
+  --color-cream-100: #faf6ed;
+  --color-cream-200: #f2ebda;
+  --color-cream-300: #e5dac2;
+  --color-cream-400: #d3c3a2;
+  --color-cream-500: #a89370;
+  --color-cream-600: #8a7455;
+  --color-cream-700: #5f5340;
+
+  /* Elegant serif for headings; falls back through widely-installed serifs. */
+  --font-display: "Playfair Display", "Didot", "Bodoni MT", Georgia,
+    "Times New Roman", serif;
+
+  --shadow-gold: 0 4px 14px 0 rgb(212 160 23 / 0.25);
+  --shadow-gold-lg: 0 10px 30px -5px rgb(212 160 23 / 0.45);
+  --shadow-soft: 0 2px 12px -2px rgb(11 11 14 / 0.08);
+  --shadow-soft-lg: 0 18px 45px -12px rgb(11 11 14 / 0.18);
+
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-fade-in-up: fade-in-up 0.7s ease-out both;
+  --animate-scale-in: scale-in 0.5s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-gold: pulse-gold 2.5s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-gold {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(212 160 23 / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgb(212 160 23 / 0);
+  }
+}
+
+/*
+  Stagger helpers for entrance animations. The keyframed animations above use
+  `both` fill-mode, so a delayed element stays in its "from" state (hidden)
+  until its delay elapses instead of flashing into view first.
+*/
+@utility animate-delay-200 {
+  animation-delay: 200ms;
+}
+@utility animate-delay-300 {
+  animation-delay: 300ms;
+}
+@utility animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+@keyframes ripple-out {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 250%;
+    aspect-ratio: 1;
+    height: auto;
+    opacity: 0;
+  }
+}
+
+/*
+  Reusable component classes referenced throughout the pages. They live in the
+  `components` layer, which Tailwind declares ahead of `utilities`, so a
+  utility on the same element (e.g. `bg-green-100` on a `.glass-card`) still
+  wins the cascade.
+*/
+@layer components {
+  /* Frosted bar shown once the page is scrolled. */
+  .glass-nav {
+    background-color: rgb(253 252 249 / 0.85);
+    backdrop-filter: blur(12px) saturate(140%);
+    border-bottom: 1px solid var(--color-cream-200);
+  }
+
+  .glass-card {
+    background-color: rgb(255 255 255 / 0.72);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-cream-200);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Gradient gold lettering. */
+  .gold-text {
+    background-image: linear-gradient(
+      100deg,
+      var(--color-gold-600),
+      var(--color-gold-400) 45%,
+      var(--color-gold-600)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gold-btn {
+    display: inline-block;
+    background-image: linear-gradient(
+      100deg,
+      var(--color-gold-600),
+      var(--color-gold-500) 50%,
+      var(--color-gold-400)
+    );
+    color: var(--color-dark-950);
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: var(--shadow-gold);
+    transition:
+      box-shadow 300ms ease,
+      transform 300ms ease,
+      filter 300ms ease;
+  }
+
+  .gold-btn:hover:not(:disabled) {
+    box-shadow: var(--shadow-gold-lg);
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+  }
+
+  .gold-btn:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .gold-btn:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .hover-glow {
+    transition:
+      transform 400ms ease,
+      box-shadow 400ms ease;
+  }
+
+  .hover-glow:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold-lg);
+  }
+
+  /* Click feedback for CTA buttons. */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    background-color: rgb(255 255 255 / 0.55);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .ripple:active::after {
+    animation: ripple-out 550ms ease-out;
+  }
+
+  /*
+    Spam-trap field. Hidden from sight and from assistive tech (the input also
+    carries aria-hidden/tabIndex=-1) while staying in the DOM and focusable to
+    scripted bots — so `display: none` is deliberately avoided.
+  */
+  .honeypot-wrap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-white);
+    color: var(--color-dark-600);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  /* Map the existing light utility palette onto the class-based dark theme. */
+  .dark .bg-white {
+    background-color: var(--color-dark-900);
+  }
+
+  .dark .bg-cream-50 {
+    background-color: var(--color-dark-900);
+  }
+
+  .dark .bg-cream-100 {
+    background-color: var(--color-dark-800);
+  }
+
+  .dark .bg-cream-200,
+  .dark .hover\:bg-cream-200:hover {
+    background-color: var(--color-dark-700);
+  }
+
+  .dark .text-dark-950,
+  .dark .text-dark-800,
+  .dark .text-dark-700,
+  .dark .text-dark-600 {
+    color: var(--color-cream-100);
+  }
+
+  .dark .text-cream-700,
+  .dark .text-cream-600,
+  .dark .text-cream-500,
+  .dark .text-cream-400,
+  .dark .text-cream-300 {
+    color: var(--color-cream-300);
+  }
+
+  .dark .text-cream-100 {
+    color: var(--color-cream-50);
+  }
+
+  .dark .border-cream-300,
+  .dark .border-cream-200 {
+    border-color: var(--color-dark-700);
+  }
+
+  .dark .glass-card {
+    background-color: rgb(35 35 40 / 0.82);
+    border-color: var(--color-dark-700);
+  }
+}
+
+/* Reading-progress bar; width is set inline from scroll position in App.tsx. */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-600),
+    var(--color-gold-400)
+  );
+  transition: width 120ms linear;
+}
