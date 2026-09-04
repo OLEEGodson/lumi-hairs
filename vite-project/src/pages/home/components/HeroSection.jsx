@@ -41,7 +41,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=Luxurious%20modern%20hair%20salon%20interior%20with%20warm%20golden%20ambient%20lighting%2C%20elegant%20cream%20walls%20with%20gold%20accents%2C%20marble%20flooring%2C%20stylish%20hair%20styling%20stations%2C%20large%20ornate%20mirrors%2C%20chandeliers%2C%20fresh%20flowers%2C%20professional%20atmosphere%2C%20empty%20and%20clean%2C%20upscale%20interior%20design&width=1920&height=1080&seq=hero-bg-salon-01&orientation=landscape"
+          src="https://images.unsplash.com/photo-1763048208932-cbe149724374?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Luxury salon interior"
           className="w-full h-full object-cover object-center"
         />
@@ -112,7 +112,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-80 h-96 rounded-3xl overflow-hidden glass-card shadow-gold-lg">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Beautiful%20woman%20with%20perfect%20blowout%20hairstyle%2C%20radiant%20skin%2C%20confident%20smile%2C%20wearing%20elegant%20cream%20silk%20robe%2C%20sitting%20in%20luxury%20salon%20chair%2C%20warm%20golden%20lighting%2C%20editorial%20beauty%20portrait%2C%20high-end%20fashion%20photography%20style&width=640&height=800&seq=hero-portrait-salon-01&orientation=portrait"
+                  src="https://images.pexels.com/photos/18623177/pexels-photo-18623177.jpeg"
                   alt="Happy salon client"
                   className="w-full h-full object-cover object-top"
                 />

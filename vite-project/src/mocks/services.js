@@ -6,7 +6,7 @@ export const services = [
     price: 65,
     duration: "45 min",
     description: "Expert cut tailored to your face shape and style preferences. Includes wash, conditioning treatment, and blow-dry styling.",
-    image: "https://readdy.ai/api/search-image?query=Professional%20salon%20haircut%20scene%20with%20stylist%20cutting%20clients%20hair%20in%20luxurious%20modern%20salon%20with%20warm%20ambient%20lighting%20and%20elegant%20interior%20design%2C%20soft%20gold%20accents%2C%20cream%20walls%2C%20editorial%20photography%2C%20high%20detail&width=800&height=600&seq=svc-haircut-01&orientation=landscape",
+    image: "https://images.pexels.com/photos/12192379/pexels-photo-12192379.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: true,
   },
   {
@@ -16,7 +16,7 @@ export const services = [
     price: 120,
     duration: "2 hr",
     description: "Full-color transformation using premium ammonia-free dyes. Includes consultation, color mixing, application, and gloss treatment.",
-    image: "https://readdy.ai/api/search-image?query=Elegant%20salon%20hair%20coloring%20service%20with%20stylist%20applying%20color%20to%20client%20hair%20in%20bright%20modern%20salon%20with%20marble%20countertops%20and%20gold%20decor%2C%20warm%20lighting%2C%20luxurious%20atmosphere&width=800&height=600&seq=svc-color-02&orientation=landscape",
+    image: "https://images.pexels.com/photos/4981479/pexels-photo-4981479.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: true,
   },
   {
@@ -26,7 +26,7 @@ export const services = [
     price: 85,
     duration: "1 hr",
     description: "Intensive repair treatment with keratin and argan oil. Restores damaged hair, adds shine, and strengthens from root to tip.",
-    image: "https://readdy.ai/api/search-image?query=Luxury%20hair%20treatment%20in%20upscale%20salon%20with%20steamer%20and%20calm%20client%20receiving%20deep%20conditioning%20mask%2C%20warm%20candlelight%20ambiance%2C%20cream%20and%20gold%20interior%20design%2C%20spa-like%20atmosphere&width=800&height=600&seq=svc-treatment-03&orientation=landscape",
+    image: "https://images.pexels.com/photos/23349891/pexels-photo-23349891/free-photo-of-hairdresser-washing-customer-hair.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: false,
   },
   {
@@ -36,7 +36,7 @@ export const services = [
     price: 95,
     duration: "1 hr 15 min",
     description: "Rejuvenating facial with cleanse, exfoliation, extraction, mask, and moisturizer. Tailored to your skin type with premium products.",
-    image: "https://readdy.ai/api/search-image?query=Serene%20facial%20treatment%20room%20with%20aesthetician%20performing%20facial%20on%20relaxed%20client%2C%20soft%20cream%20towels%2C%20aromatherapy%20diffuser%2C%20gold%20accessories%2C%20luxurious%20spa%20setting%20with%20natural%20light&width=800&height=600&seq=svc-facial-04&orientation=landscape",
+    image: "https://images.pexels.com/photos/36497926/pexels-photo-36497926/free-photo-of-relaxing-spa-facial-treatment-session.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: false,
   },
   {
@@ -46,7 +46,7 @@ export const services = [
     price: 55,
     duration: "50 min",
     description: "Soothing foot soak, nail shaping, cuticle care, exfoliating scrub, massage, and polish. Pure relaxation for your feet.",
-    image: "https://readdy.ai/api/search-image?query=Luxurious%20pedicure%20station%20in%20modern%20salon%20with%20massage%20chair%20and%20foot%20spa%20basin%2C%20gold%20and%20white%20interior%20with%20soft%20lighting%2C%20elegant%20nail%20polish%20display%2C%20relaxing%20atmosphere&width=800&height=600&seq=svc-pedicure-05&orientation=landscape",
+    image: "https://images.pexels.com/photos/31091766/pexels-photo-31091766/free-photo-of-professional-pedicure-treatment-at-salon.jpeg?cs=tinysrgb&dpr=1&w=500",
     popular: false,
   },
   {
@@ -56,7 +56,7 @@ export const services = [
     price: 48,
     duration: "45 min",
     description: "Long-lasting gel manicure with nail shaping, cuticle work, buffing, and premium gel polish. Chip-resistant for up to 3 weeks.",
-    image: "https://readdy.ai/api/search-image?query=Elegant%20manicure%20service%20in%20bright%20salon%20with%20nail%20technician%20working%20on%20client%20hands%2C%20gold%20tools%2C%20cream%20marble%20table%2C%20fresh%20flowers%2C%20luxurious%20and%20clean%20aesthetic&width=800&height=600&seq=svc-manicure-06&orientation=landscape",
+    image: "https://images.pexels.com/photos/5681797/pexels-photo-5681797.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: false,
   },
   {
@@ -66,7 +66,7 @@ export const services = [
     price: 110,
     duration: "1 hr",
     description: "Full-body Swedish massage to melt away tension. Using aromatic oils and long, flowing strokes for deep relaxation.",
-    image: "https://readdy.ai/api/search-image?query=Dimly%20lit%20luxury%20spa%20massage%20room%20with%20massage%20table%20draped%20in%20cream%20linens%2C%20candles%2C%20aromatherapy%20oils%2C%20soft%20gold%20accents%2C%20peaceful%20and%20serene%20atmosphere%2C%20professional%20spa%20setting&width=800&height=600&seq=svc-massage-07&orientation=landscape",
+    image: "https://images.pexels.com/photos/19641831/pexels-photo-19641831/free-photo-of-woman-lying-down-with-eyes-closed-at-massage.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: true,
   },
   {
@@ -85,8 +85,8 @@ export const services = [
     category: "Bridal",
     price: 350,
     duration: "3 hr",
-    description: "Complete bridal beauty package: trial hairstyling, makeup application, facial, and manicure. Look flawless on your special day.",
-    image: "https://readdy.ai/api/search-image?query=Bridal%20makeup%20and%20hair%20styling%20in%20elegant%20salon%20suite%20with%20bride%20in%20white%20robe%2C%20professional%20makeup%20artist%20and%20hairstylist%20working%2C%20gold%20mirrors%2C%20cream%20interior%2C%20luxurious%20bridal%20preparation%20scene&width=800&height=600&seq=svc-bridal-09&orientation=landscape",
+    description: "Complete bridal beauty package: trial hairstyling, makeup, facial, and manicure. Look flawless on your special day.",
+    image: "https://images.pexels.com/photos/37008307/pexels-photo-37008307/free-photo-of-professional-makeup-application-on-smiling-woman.jpeg?auto=compress&w=1260&h=750&dpr=1",
     popular: true,
   },
 ];
