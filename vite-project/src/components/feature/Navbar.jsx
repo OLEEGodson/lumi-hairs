@@ -1,3 +1,4 @@
+import lumiHairsLogo from "../../assets/lumi-hairs-logo.png";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -64,15 +65,17 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
+          <img
+            src={lumiHairsLogo}
+            alt="Lumi-Hairs Salon & Spa"
+            className="w-14 h-12 flex items-center justify-center rounded-full bg-black-500"
+          />
           <Link
             to="/"
             onClick={() => setMobileOpen(false)}
             className="flex items-center gap-2 text-2xl font-display font-bold gold-text"
           >
-            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gold-500">
-              <i className="ri-scissors-cut-line text-dark-950 text-lg"></i>
-            </span>
-            Lumina
+            
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
